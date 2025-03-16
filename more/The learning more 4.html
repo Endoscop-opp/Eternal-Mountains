@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://s1.1zoom.ru/big3/26/357022-svetik.jpg" alt="" class="head">
+    <h1>Mountains of Dagestan</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Погрузитесь в сердце Кавказских гор, отправившись в захватывающий поход по Дагестану – краю древних традиций, живописных ущелий и гостеприимных людей. Откройте для себя этот уникальный регион, где вершины гор пронзают облака, а история оживает в каждом камне старинных аулов. Пройдите по узким тропам, петляющим вдоль глубоких каньонов, насладитесь видами с головокружительных перевалов и познакомьтесь с богатой культурой и самобытным народом, бережно хранящим свои традиции.
+
+    Вас ждут величественные горы, глубокие ущелья, древние крепости и живописные водопады. Почувствуйте энергию этого края, ощутите единение с природой и познакомьтесь с уникальным кавказским гостеприимством. Попробуйте национальную кухню, послушайте горские песни и увезите с собой незабываемые впечатления о Дагестане – крае легенд и гордой красоты, который никого не оставит равнодушным. Этот поход станет настоящим открытием и подарит вам воспоминания, которые будут греть вас долгие годы.</p>
+<h3>Difficulty level: 3/10</h3>
+<h4>Any other questions?</h4>
+<p class="contact">Contact the support service, or call the official phone number to contact the administrators, they will answer all your questions.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Tour programs</h3>
+<ul><li>Hiking to 3 peaks of the Altai Mountains</li>
+    <li>Mountain Enduro Riding</li>
+    <li>Custom meals (Buffet)</li>
+    <li>Accommodation at the tour base</li>
+    <li>A walk through beautiful places</li>
+    <li>Photosession</li>
+    <li>Cozy evenings next to a campfire, and a personal musician</li>
+    <li>River bathing (Optional)</li>
+    <li>Guided tour of the Altai mountains, with a history story</li>
+    <li>Additional programs</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://i.pinimg.com/736x/f1/39/2f/f1392f5403318e7dcd11066e8c472f7f.jpg" alt="" class="slide">
+           <img src="https://i.pinimg.com/736x/cf/b9/d6/cfb9d69e5ae5b15e062dbd781e9d1fec.jpg" alt="" class="slide">
+           <img src="https://3d-linker.ru/components/com_jshopping/files/img_products/full_339.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=78ae589f16aa135abbd5954faca5fba5_l-8495786-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://cdn.culture.ru/images/5d4d066f-96e4-5f8d-acc7-8eb0d77bc5d5" alt="" class="slide">
+           <img src="https://www.lg.com/ru/images/TV/features/FHD2021/TV-FHD-02-Picture-Quality-Desktop.jpg" alt="" class="slide">
+
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

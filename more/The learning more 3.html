@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=cddc69d4d405a53d1ef25b7241d8b78efdc8c0c6-13219041-images-thumbs&n=13" alt="" class="head">
+    <h1>Hiking in the Himalayas</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Embark on an exciting journey to the majestic Himalayas, where snow-capped peaks rest against the sky, and ancient cultures keep their secrets. This hike is not just a physical challenge, but an immersion into the world of spirituality, beauty and untouched nature. Walk along the trails laid out over the centuries, experience the grandeur of the eight thousand meters, breathe in the purest mountain air and get acquainted with the distinctive way of life of local residents living in harmony with the harsh climate.
+You will find picturesque valleys dotted with bright flowers, mountain rivers flowing from glaciers, Buddhist monasteries that preserve the wisdom of centuries, and incredible panoramas that take your breath away. Overcome yourself, feel at one with nature and discover a new perspective by climbing one of the most impressive mountain systems in the world. This hike will be an unforgettable adventure that will change your life and give you memories that will keep you warm for many years to come.</p>
+<h3>Difficulty level: 8/10</h3>
+<h4>Any other questions?</h4>
+<p class="contact">Contact the support service, or call the official phone number to contact the administrators, they will answer all your questions.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Tour programs</h3>
+<ul><li>Hiking to 3 peaks of the Altai Mountains</li>
+    <li>Mountain Enduro Riding</li>
+    <li>Custom meals (Buffet)</li>
+    <li>Accommodation at the tour base</li>
+    <li>A walk through beautiful places</li>
+    <li>Photosession</li>
+    <li>Cozy evenings next to a campfire, and a personal musician</li>
+    <li>River bathing (Optional)</li>
+    <li>Guided tour of the Altai mountains, with a history story</li>
+    <li>Additional programs</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://avatars.mds.yandex.net/i?id=f32882572a2235f7e5c484aea11f61d5_l-10023438-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=0666a3ec57ef7009cb22bcea62f28a94_l-10639796-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/3f/e7/f6/3fe7f61c4a4c952a60e806e914e59bdb.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=360715c12ceae90610bb04bfe6d9c55c_l-12715359-images-thumbs&n=13" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=f706d19a76aaf716ffd4f40dfc7585a937a02659-8981113-images-thumbs&n=13" alt="" class="head">
+    <h1>Kazakh peaks</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Discover the greatness of the Caucasus Mountains on an unforgettable hike, where rugged peaks meet the greenery of alpine meadows, and ancient history is intertwined with modernity. This hike is an opportunity to test yourself, enjoy the breathtaking scenery and get acquainted with the rich culture and traditions of the peoples inhabiting this mountainous region. Feel the energy of the mountains, feel at one with nature, and create memories that will keep you warm for years to come.
+
+    Picturesque gorges, crystal clear rivers, mighty waterfalls and peaks rising into the clouds are waiting for you. Climb to the observation decks with panoramic views of the Caucasus Mountain Range, taste national cuisine, get acquainted with local customs and take a piece of this unique region with you. This hike will be a real adventure that will fill your life with new impressions and discover for you the beauty and grandeur of the Caucasus Mountains.</p>
+<h3>Difficulty level: 2/10</h3>
+<h4>Any other questions?</h4>
+<p class="contact">Contact the support service, or call the official phone number to contact the administrators, they will answer all your questions.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Tour programs</h3>
+<ul><li>Hiking to 3 peaks of the Altai Mountains</li>
+    <li>Mountain Enduro Riding</li>
+    <li>Custom meals (Buffet)</li>
+    <li>Accommodation at the tour base</li>
+    <li>A walk through beautiful places</li>
+    <li>Photosession</li>
+    <li>Cozy evenings next to a campfire, and a personal musician</li>
+    <li>River bathing (Optional)</li>
+    <li>Guided tour of the Altai mountains, with a history story</li>
+    <li>Additional programs</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://avatars.mds.yandex.net/i?id=1e1c27ddb7a36855cfd6fca98b415c06_l-4502399-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/b5/1a/01/b51a01857e03740ea46557d83baef083.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/get-mpic/4947485/2a0000018fcfd0cea6fd4eeec8325b9bcef3/orig" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=feda74a0d1bb5223495a4be73c3ff7dc_l-7065781-images-thumbs&n=13" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

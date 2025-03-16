@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://i.pinimg.com/736x/22/98/f8/2298f88e814c8a1e2c71bbac0094741c.jpg" alt="" class="head">
+    <h1>Sunrise on Kamchatka</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">We invite you to an exciting journey through Kamchatka, a land where pristine wildlife meets the power of geological processes. This big hike is not just trekking, it is a deep dive into the world of volcanoes, geysers, bears and incredible landscapes. Discover the unexplored beauty of the Far East, feel yourself a part of the elements and find new facets of yourself away from civilization.
+
+    What awaits you?
+    
+    Conquering volcanic giants: Climb the slopes of active and extinct volcanoes, feel the heat of the earth's interior under your feet and enjoy breathtaking panoramas stretching to the horizon. We will visit [specify specific volcanoes, for example, Gorely, Mutnovsky, Avachinsky], each of which is unique in its shape, activity and surrounding landscape. Take a look into craters full of bubbling lava or smoking fumaroles – it's a sight that will stay with you forever.</p>
+<h3>Difficulty level: 7/10</h3>
+<h4>Any other questions?</h4>
+<p class="contact">Contact the support service, or call the official phone number to contact the administrators, they will answer all your questions.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Tour programs</h3>
+<ul><li>Hiking to 3 peaks of the Altai Mountains</li>
+    <li>Mountain Enduro Riding</li>
+    <li>Custom meals (Buffet)</li>
+    <li>Accommodation at the tour base</li>
+    <li>A walk through beautiful places</li>
+    <li>Photosession</li>
+    <li>Cozy evenings next to a campfire, and a personal musician</li>
+    <li>River bathing (Optional)</li>
+    <li>Guided tour of the Altai mountains, with a history story</li>
+    <li>Additional programs</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://i.pinimg.com/originals/ca/6d/f8/ca6df8e9569e485873fb1e4e270c3869.jpg" alt="" class="slide">
+           <img src="https://cs14.pikabu.ru/post_img/2023/08/07/6/og_og_169139711222608531.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/get-mpic/4219828/img_id3104677909391004070.jpeg/orig" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=dd5b8579646d274276830b40e4ace779_l-5210229-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://i.pinimg.com/originals/60/c6/e9/60c6e926424f506a0df7f75e23b61d77.jpg" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/e3/c6/2f/e3c62fa4f0d12e2294d4fbd8309d9701.jpg" alt="" class="head">
+    <h1>Alai mauntains</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">On a trip to the Altai mountains, you will have an unforgettable adventure in 3 beautiful Altai mountains. The whole tour takes 15 days. The 15-day account includes the training and education of tourists, which will take no more than 3 days, accommodation and meals are included in the program at the tour base. When to go on tour, it's up to you, the time of the year, the weather, the time of the day. All necessary equipment is provided to you without timely additional payment.</p>
+<h3>Difficulty level: 4/10</h3>
+<h4>Any other questions?</h4>
+<p class="contact">Contact the support service, or call the official phone number to contact the administrators, they will answer all your questions.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Tour programs</h3>
+<ul><li>Hiking to 3 peaks of the Altai Mountains</li>
+    <li>Mountain Enduro Riding</li>
+    <li>Custom meals (Buffet)</li>
+    <li>Accommodation at the tour base</li>
+    <li>A walk through beautiful places</li>
+    <li>Photosession</li>
+    <li>Cozy evenings next to a campfire, and a personal musician</li>
+    <li>River bathing (Optional)</li>
+    <li>Guided tour of the Altai mountains, with a history story</li>
+    <li>Additional programs</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://cdn1.ozone.ru/s3/multimedia-i/6368848242.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=fe829c68a30d81c224a77fd19a92a980_l-9559767-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/get-mpic/5042167/img_id4550494336477952635.jpeg/orig" alt="" class="slide">
+           <img src="https://data.1freewallpapers.com/download/mountains-relief-nature-landscape-aerial-view.jpg" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>

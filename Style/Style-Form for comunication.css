@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-image: url(https://i.playground.ru/i/pix/644110/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+max-width: 520px;
+width: 520px;
+min-width: auto;
+height: fit-content;
+border-radius: 30px;
+background-color: #5858585e;
+backdrop-filter: blur(10px);
+}
+
+.Name{
+    font-family: Julius Sans One, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    letter-spacing: 25px;
+    padding-top: 60px;
+    padding-left: 30px;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+}
+
+.in-pu-em{
+    max-width: 470px;
+    width: 470px;
+    min-width: auto;
+    height: 45px;
+    max-height: 45px;
+    border-radius: 30px;
+    background-color: #E2E2E2;
+    font-size: 22px;
+    border: none;
+    padding-left: 50px;
+    padding-right: 20px;
+   
+}
+
+
+.in-pu-em1{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.www{
+width: 15px;
+height: 15px;
+border: none;
+border-radius: 100%;
+margin: 10px;
+}
+
+.chek{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.bth-olg{
+    max-width: 470px;
+    width: 470px;
+    min-width: auto;
+    max-height: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    background-color: #E2E2E2;
+    border: none;
+    font-size: 24px;
+    font-family: Julius Sans One, Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+}
+
+.ww{
+    margin-top: 50px;
+}
+
+
+.com{
+    text-align: start;
+    font-family: Julius Sans One, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-weight: 300;
+    color: white;
+}
+
+.Comm{
+height: 150px;
+max-height: 150px;
+padding: 20px;
+}
+
+@media screen and (max-width: 1000px){
+    .container{
+        transform: scale(70%);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        transform: scale(60%);
+    }
+}
+
+@media screen and (max-width: 350px){
+    .container{
+        transform: scale(50%);
+    }
+}
+
+
+@media screen and (max-width: 300px){
+    .container{
+        transform: scale(45%);
+    }
+}

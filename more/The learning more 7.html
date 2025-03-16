@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/Style-The learning more.css">
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/c1/fa/3a/c1fa3ad2d17f7371d4ee37934b3d3b36.jpg" alt="" class="head">
+    <h1>Arabian Sands</h1>
+    <div class="grid-set">
+<div class="one">
+<p class="info">Immerse yourself in the mystical beauty of the Arabian Mountains, where ancient petroglyphs tell the stories of thousands of years, and harsh landscapes hide oases of life. This hike is a journey into the world of silent peaks, rocky valleys and spectacular sunsets that turn the rocks into fiery colors. Discover the hidden treasures of the Arabian Peninsula, where history and nature merge into one, offering a unique and unforgettable experience.
+
+    Majestic mountain ranges, mysterious canyons, ancient ruins and a night sky studded with millions of stars await you. Feel the silence and peace of these places, learn about the Bedouin culture and their traditions, and find new strength in conquering the peaks of the Arabian Mountains. This hike is an opportunity to see the world from a different perspective, discover unexplored facets of beauty and feel connected to the ancient land.</p>
+<h3>Difficulty level: 1/10</h3>
+<h4>Any other questions?</h4>
+<p class="contact">Contact the support service, or call the official phone number to contact the administrators, they will answer all your questions.</p>
+</div>
+
+
+
+<div class="two">
+<h3>Tour programs</h3>
+<ul><li>Hiking to 3 peaks of the Altai Mountains</li>
+    <li>Mountain Enduro Riding</li>
+    <li>Custom meals (Buffet)</li>
+    <li>Accommodation at the tour base</li>
+    <li>A walk through beautiful places</li>
+    <li>Photosession</li>
+    <li>Cozy evenings next to a campfire, and a personal musician</li>
+    <li>River bathing (Optional)</li>
+    <li>Guided tour of the Altai mountains, with a history story</li>
+    <li>Additional programs</li>
+</ul>
+</div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+           <img src="https://dasart.ru/userdata/image/76/61/766156724338640eebe75be78f507fe8.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=54c936acc1ba4af67521c98de9c083c3_l-5906106-images-thumbs&n=13" alt="" class="slide">
+           <img src="https://wallpapers.com/images/hd/landscape-pictures-5vd856xz93una56a.jpg" alt="" class="slide">
+           <img src="https://avatars.mds.yandex.net/i?id=6c39c3503f4dbf1532f9c2ba90fdca94_l-4576013-images-thumbs&n=13" alt="" class="slide">
+        </div>
+        <button class="nav-button prev-button">&lt;</button>
+        <button class="nav-button next-button">&gt;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let currentIndex = 0;
+        const slideWidth = slides[0].offsetWidth;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(slides.length - 1); 
+            }
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>
